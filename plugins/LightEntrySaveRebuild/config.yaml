@@ -1,0 +1,13 @@
+id: LightEntrySaveRebuild
+name: Light Entry Save Rebuild
+version: 0.1.0
+description: 記事の保存後の再構築で前後の再構築を省略する機能と、MTEntriesタグに日付による絞り込み機能を追加します。
+
+callbacks:
+    init_app: $LightEntrySaveRebuild::MT::LightEntrySaveRebuild::init_app
+
+tags:
+    filters:
+        Entries:
+            from_to_ts:
+                handler: $LightEntrySaveRebuild::MT::LightEntrySaveRebuild::entries_filter
